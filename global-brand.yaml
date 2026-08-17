@@ -1,0 +1,47 @@
+# ============================================================
+# 全局品牌配置 — 联友SCM技术说明（汉德车桥）
+# ============================================================
+# 拟定默认科技蓝色系；若后续取得联友科技/汉德车桥VI规范，覆盖对应字段即可。
+
+brand:
+  company_name: "联友科技"                  # 方案方
+  client_name: "主机厂类客户"                # 客户方（材料通用，不限单一客户）
+  # —— 页眉区全局样式 ——
+  header_layout: "页眉区：左侧主标题+副标题（上下两行靠左），右侧预留Logo占位空位置"
+  logo_position: "页眉右侧（仅预留空位置，联友科技Logo由用户统一手动粘贴，方案不生成具体Logo图形）"
+  logo_size: "宽120px"
+  logo_placeholder: true                     # true=仅预留占位空位，不绘制Logo图形
+  dual_logo: false                           # 单Logo（联友科技）
+
+color_palette:
+  primary: "#1F4E79"            # 深蓝 — 标题、架构框图、表格表头、底部横条、装饰线、流程箭头
+  secondary: "#2E8BC0"          # 科技蓝 — 次要信息、连接线、图表辅助元素
+  accent: "#E87722"             # 橙 — 关键数字/结论高亮/异常路径/待对齐标注
+  background: "#FFFFFF"         # 白色背景
+  text_primary: "#1A1A1A"      # 正文黑色
+  text_secondary: "#666666"    # 注释灰色
+  neutral_gray: "#F5F6FA"      # 浅灰底色 — 卡片背景、补充信息条
+  light_blue_gray: "#EBF0F5"   # 极浅蓝灰 — 卡片衬托、示例区背景
+
+typography:
+  title_font: "思源黑体 Bold"
+  title_size: "28pt"
+  subtitle_font: "思源黑体 Medium"
+  subtitle_size: "18pt"
+  body_font: "思源黑体 Regular"
+  body_size: "14pt"
+  label_font: "思源黑体 Regular"
+  label_size: "10pt"
+  line_height: 1.6
+
+visual_style:
+  keywords:
+    - "专业咨询"
+    - "简洁"
+    - "科技感"
+    - "数据驱动"
+    - "留白充足"
+    - "卡片式布局"
+  density: "moderate"
+  image_style: "flat_icons"
+  data_viz_style: "clean"

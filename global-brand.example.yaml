@@ -1,0 +1,40 @@
+# ============================================================
+# 全局品牌配置 — 填写示例
+# ============================================================
+# 这是基于"某物流科技平台"咨询方案PPT的示例配置。
+# 复制此文件为 global-brand.yaml 并按你的实际项目修改即可。
+
+brand:
+  company_name: "某物流科技平台"
+  logo_position: "右上角"
+  logo_size: "宽120px"
+
+color_palette:
+  primary: "#0033A0"           # 深蓝 — 标题、图表主轴、关键强调
+  secondary: "#00B5E2"         # 科技蓝 — 次要信息、连接线、图表辅助元素
+  accent: "#E87722"            # 警示橙 — 仅用于关键数字/结论高亮/异常路径
+  background: "#FFFFFF"        # 白色背景
+  text_primary: "#1A1A1A"      # 正文黑色
+  text_secondary: "#666666"    # 注释灰色
+
+typography:
+  title_font: "思源黑体 Bold"
+  title_size: "28pt"
+  subtitle_font: "思源黑体 Medium"
+  subtitle_size: "18pt"
+  body_font: "思源黑体 Regular"
+  body_size: "14pt"
+  label_font: "思源黑体 Regular"
+  label_size: "10pt"
+  line_height: 1.6
+
+visual_style:
+  keywords:
+    - "专业"
+    - "简洁"
+    - "科技感"
+    - "数据驱动"
+    - "留白充足"
+  density: "moderate"
+  image_style: "flat_icons"
+  data_viz_style: "clean"

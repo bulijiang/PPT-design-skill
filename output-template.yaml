@@ -1,0 +1,101 @@
+# ============================================================
+# 页面描述输出模板（Output Template）
+# ============================================================
+# 用途：定义每页 PPT 设计方案的 MD 输出结构。
+# 使用：Phase 2 Step E 严格按此模板填充，不得缺省 must 标记的字段。
+# 标记说明：[must]=必填 [optional]=可选 [cond]=条件字段
+
+# ============================================================
+# 第 {page_number} 页描述
+# ============================================================
+page_meta:                                # [must]
+  page_number: 0                          # [must] 页码（从1开始）
+  section_id: 1                           # [must] 所属章节编号
+  page_type: ""                           # [must] 页型，必须取自受控词汇表
+  page_title: ""                          # [must] 页面标题（≤12字）
+
+  # —— 逻辑锚点 ——
+  one_sentence_takeaway: ""               # [must] 一句话结论（读者读完本页必须记住的唯一信息，≤30字）
+  question_this_page_answers: ""          # [must] 本页回答的核心问题
+  target_audience: ""                     # [must] 目标受众角色
+
+  # —— 叙事链接 ——
+  follows_from: ""                        # [must] 承接上一页的哪个结论
+  narrative_role: ""                      # [must] 论证角色，必须取自受控词汇表
+  leads_to: ""                            # [must] 本页结论如何引出下一页
+
+# ============================================================
+# 可见内容（Visible Content）
+# ============================================================
+visible_content:                          # [must]
+  headline: ""                            # [must] 主标题（页眉区左侧，≤20字）
+  subtitle: ""                            # [optional] 副标题（页眉区主标题正下方，紧跟）
+  body_text:                              # [must] 核心正文（每条≤25字，2-5条）
+    - ""
+  key_metrics:                            # [optional] 关键数字/标签（2-4个）
+    - value: ""                           #   数字，如"37%"
+      unit: ""                            #   单位/说明，如"效率提升"
+      highlight: false                    #   是否用强调色突出
+  bottom_line: ""                         # [optional] 底部结论文字
+
+# ============================================================
+# 视觉结构（Visual Structure）
+# ============================================================
+visual_structure:                         # [must]
+  layout_type: ""                         # [must] 布局类型，必须取自受控词汇表
+  spatial_split:                          # [cond] 空间分配（视布局类型而定）
+    left_ratio: ""                        #   如"40%"
+    right_ratio: ""                       #   如"60%"
+    top_ratio: ""                         #   如"15%"
+    bottom_ratio: ""                      #   如"85%"
+    columns: 0                            #   列数（仅网格/多栏布局）
+    rows: 0                               #   行数（仅网格布局）
+
+  chart_modules:                          # [must] 图表/可视化模块（至少1个）
+    - chart_type: ""                      #   [must] 图表类型，取自受控词汇表
+      data_description: ""               #   [must] 图表要展示的数据内容（自然语言描述）
+      position_hint: ""                  #   [must] 页面位置：left | center | right | top | bottom | top-left-quarter | top-right-quarter | bottom-left-half | bottom-right-half
+      emphasis_point: ""                 #   [optional] 图表中需高亮的关键数据点
+
+  icon_style: ""                          # [optional] 图标风格提示
+  special_requirements:                   # [optional] 特殊视觉需求
+    - ""
+
+# ============================================================
+# 内容优先级（Content Priority）
+# ============================================================
+priority:                                 # [must]
+  must_show:                              # [must] 必须展示（模型不能省略）
+    - ""
+  should_show:                            # [optional] 应该展示（空间允许则展示）
+    - ""
+  may_simplify:                           # [optional] 可简化（空间紧张时可缩写或合并）
+    - ""
+  do_not_render:                          # [optional] 绝对不要展示
+    - ""
+
+# ============================================================
+# 备注（Notes）
+# ============================================================
+notes:                                    # [must]
+  speaker_notes: |                        # [must] 演讲备注（讲解要点+过渡语）
+    # 要点1：...
+    # 要点2：...
+    # 过渡语：...
+
+  design_rationale: |                     # [must] 设计理由（为什么这么设计）
+    # 为什么选择这个布局：...
+    # 视觉焦点引导策略：...
+
+  model_behavior_hints: |                 # [optional] 模型行为提示（给GPT-5.5的额外约束）
+    # 如：强调色仅用于X/Y/Z位置
+
+  # ⚠️ 以下字段为条件字段，仅当信息密度超标时出现
+  page_density_warning: |                 # [cond] 信息密度超标警告
+    # 如触发，描述降级策略和裁减优先级
+
+# ============================================================
+# image2 视觉生成 Prompt（中文）
+# ============================================================
+image2_prompt: ""                        # [must] 最终生成的完整中文prompt，
+                                          #        可直接复制粘贴到image2使用
