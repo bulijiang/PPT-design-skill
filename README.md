@@ -1,7 +1,131 @@
-# PPT Design Skill
+📘 PPT Design Skill
+A Claude Code skill that transforms a PPT outline into fully structured, slide‑by‑slide design documents.
+
+🚀 Overview
+PPT Design Skill is a Claude Code skill that converts a raw PPT outline into a complete page‑by‑page design specification.
+It integrates brand configuration, project constraints, and controlled vocabularies to generate consistent, high‑quality design documents for every slide.
+
+Each generated slide includes:
+
+Full copywriting (complete text content)
+
+Visual structure (layout, hierarchy, composition guidance)
+
+An AI‑ready image prompt (optimized for image generation models such as image2)
+
+Versioning and revision logs (auto‑managed by the skill)
+
+This skill is ideal for teams that need repeatable, high‑quality PPT design workflows powered by AI.
+
+✨ Key Features
+1. Page‑by‑page PPT design generation
+Turn any PPT outline into detailed slide specifications with copy, layout, and visual guidance.
+
+2. Brand configuration support
+Use config/global-brand.yaml to define brand tone, color rules, typography, and visual identity.
+
+3. Project constraints
+Use config/project-constraints.yaml to enforce project‑specific rules such as forbidden content, required structure, or compliance notes.
+
+4. Controlled vocabularies
+Ensure consistent terminology across slides using rules/controlled-vocabularies.md.
+
+5. Visual prompt generation
+Automatically produce high‑quality prompts for AI image generation tools.
+
+6. Versioning & revision logs
+The skill maintains version history and revision notes for every generated output.
+
+📂 Project Structure
+代码
+PPT-design-skill/
+├── config/
+│   ├── global-brand.yaml
+│   ├── global-brand.example.yaml
+│   ├── project-constraints.yaml
+│   └── project-constraints.yaml.bak.*
+│
+├── rules/
+│   ├── controlled-vocabularies.md
+│   ├── layout-expansion-rules.md
+│   ├── output-template.yaml
+│   ├── quality-checklist.md
+│   └── extensions/
+│       ├── skill.md
+│       ├── output-template.yaml
+│       ├── layout-expansion-rules.md
+│       └── README.md
+│
+├── outputs/
+│   └── README.md
+│
+├── skill.md
+└── README.md
+🛠 How It Works
+Provide a PPT outline (section titles, bullet points, or a full structure).
+
+The skill expands each slide using:
+
+Brand rules
+
+Project constraints
+
+Controlled vocabulary
+
+Layout expansion rules
+
+The skill outputs:
+
+A complete design document
+
+AI‑ready visual prompts
+
+Version metadata
+
+Revision logs
+
+📦 Configuration
+Brand Configuration (config/global-brand.yaml)
+Define brand tone, color palette, typography, and visual identity.
+
+Project Constraints (config/project-constraints.yaml)
+Specify project‑level rules such as:
+
+Required sections
+
+Forbidden content
+
+Compliance requirements
+
+Layout restrictions
+
+Controlled Vocabulary (rules/controlled-vocabularies.md)
+Ensure consistent terminology across slides.
+
+🧩 Extensions
+The rules/extensions/ folder contains modular rule files that extend the skill’s behavior, including layout rules, output templates, and quality checklists.
+
+📜 Versioning
+The skill automatically manages:
+
+Version numbers
+
+Revision logs
+
+Change history
+
+This ensures traceability across iterations.
+
+📄 License
+MIT License (recommended for open-source distribution).
+
+🤝 Contributions
+Contributions, issues, and feature requests are welcome.
+Feel free to open a PR or start a discussion.
 
 > A Claude Code skill that turns a PPT outline into page-by-page design docs: full copy, visual structure, and an image-ready prompt for each slide, with versioning and a revision log.
 
+**PPT Design Skill**
 一个面向 **咨询解决方案类 PPT** 的逐页设计 Skill：把一份大纲，结合品牌配置、项目约束与受控词汇表，逐页细化为包含完整文案、视觉结构和可直接用于图像生成（image2）的中文视觉提示词的独立文档，并自动管理版本与修订日志。
 
 > 注：文中 image2 为默认文生图模型，同样支持其它文生图大模型（如 Midjourney / Stable Diffusion / DALL·E 等），生成的视觉提示词可直接复用。
