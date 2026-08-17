@@ -1,3 +1,10 @@
+![GitHub stars](https://img.shields.io/github/stars/bulijiang/PPT-design-skill?style=flat-square)
+![GitHub forks](https://img.shields.io/github/forks/bulijiang/PPT-design-skill?style=flat-square)
+![GitHub issues](https://img.shields.io/github/issues/bulijiang/PPT-design-skill?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/bulijiang/PPT-design-skill?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/bulijiang/PPT-design-skill?style=flat-square)
+
+
 📘 PPT Design Skill
 A Claude Code skill that transforms a PPT outline into fully structured, slide‑by‑slide design documents.
 
